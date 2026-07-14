@@ -9,6 +9,11 @@
 }
 
 .tabla-estudiantes__encabezado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
   margin-bottom: 1rem;
 }
 
@@ -59,6 +64,79 @@
   border-bottom: 0;
 }
 
+.tabla-estudiantes td {
+  padding: 0.8rem 1rem;
+  color: #2a3652;
+}
+
+.btn-nuevo,
+.btn-editar,
+.btn-eliminar {
+  border: 0;
+  border-radius: 10px;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-nuevo {
+  background: linear-gradient(110deg, #1463d9, #1c9e7c);
+  color: #ffffff;
+}
+
+.btn-editar {
+  margin-right: 0.45rem;
+  background: #eaf1ff;
+  color: #11459c;
+}
+
+.btn-eliminar {
+  background: #ffe9e9;
+  color: #ad2020;
+}
+
+.form-estudiante {
+  margin-top: 0.8rem;
+}
+
+.form-estudiante__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.form-estudiante label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  color: #2c405f;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.form-estudiante input,
+.form-estudiante select {
+  border: 1px solid #cdd9ea;
+  border-radius: 10px;
+  padding: 0.6rem 0.7rem;
+  background: #ffffff;
+  color: #20304b;
+}
+
+.form-estudiante__activo {
+  flex-direction: row !important;
+  align-items: center;
+  align-self: end;
+  gap: 0.6rem !important;
+}
+
+.form-estudiante__acciones {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
 @media (max-width: 768px) {
   .tabla-estudiantes {
     margin: 1.2rem auto;
@@ -67,5 +145,9 @@
 
   .tabla-estudiantes__encabezado h2 {
     font-size: 1.3rem;
+  }
+
+  .form-estudiante__grid {
+    grid-template-columns: 1fr;
   }
 }
